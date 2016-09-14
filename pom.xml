@@ -41,6 +41,13 @@
       <version>1.2</version>
     </dependency>
 
+    <!-- physically include jcl-over-slf4j in the war as a workaround for https://bugzilla.redhat.com/show_bug.cgi?id=1374457 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.21</version>
+    </dependency>
+
     <!-- Import the Servlet API, we use provided scope as the API is included in JBoss EAP -->
     <dependency>
       <groupId>org.jboss.spec.javax.servlet</groupId>
