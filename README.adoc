@@ -1,0 +1,22 @@
+= Reproducer of link:https://bugzilla.redhat.com/show_bug.cgi?id=1374457[BZ1374457] "Logging profile with apache commons does not work in JBoss EAP 6"
+
+*WARNING*: `build.sh` deletes files under `JBOSS_HOME`! Do not run it before you look what it does!
+
+To run the reproducer, set `JBOSS_HOME` environment variable first
+
+[source, shell]
+----
+export JBOSS_HOME="/path/to/jboss-eap-6.4"
+----
+
+Then run `build.sh` in the directory of this `README`
+
+[source, shell]
+----
+./build.sh
+----
+
+Then visit the link:http://127.0.0.1:8080/bz1374457-1/HelloWorld[app-1] and
+link:http://127.0.0.1:8080/bz1374457-2/HelloWorld[app-2] which will produce some log statements.
+Both log statements will be written to `$JBOSS_HOME/standalone/log/app-1.log` which is the proof that the issue link:https://bugzilla.redhat.com/show_bug.cgi?id=1374457[BZ1374457] is reproducible.
+
