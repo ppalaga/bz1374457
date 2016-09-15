@@ -13,7 +13,9 @@ Then run `build.sh` in the directory of this `README`
 
 [source, shell]
 ----
-./build.sh
+./build.sh -eap6 # for EAP 6
+# or
+./build.sh -eap7 # for EAP 7
 ----
 
 Then visit the link:http://127.0.0.1:8080/bz1374457-1/HelloWorld[app-1] and
